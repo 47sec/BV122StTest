@@ -2,29 +2,42 @@
 #include<Windows.h>
 #include<conio.h>
 
+void setCursorPosition(int x, int y)
+{
+	static const HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+	std::cout.flush();
+	COORD coord = { (SHORT)x, (SHORT)y };
+	SetConsoleCursorPosition(hOut, coord);
+}
+
 int main()
 {
-
+	
 	setlocale(LC_ALL, "ru");
 	int position = 1;
 	int choose = 1;
 	while (_kbhit() == 0)
 	{
-		Sleep(500);
-		system("cls");
 		std::cout << "\n\t\t  \244\244\244 BV122StTest \244\244\244";
-		std::cout << "\n\t\t \244 задание по GitHub \244\n\n";
-		Sleep(250);
-		std::cout << "\n\t\t    press any key\n............................................................";
+		std::cout << "\n\t\t \244 задание по GitHub \244\n";
+		std::cout << "\n\t\t     press any key\n";
+		std::cout << "............................................................";
+		Sleep(1000);
+		setCursorPosition(0, 4);
+		std::cout << "\t\t                  ";
+		Sleep(300);
+		setCursorPosition(0, 3);
+		std::cout << "\n\t\t     press any key\n";
+		setCursorPosition(0, 0);
+		std::cout.flush();
 	}
 	system("cls");
 
-	//while (_kbhit() == 0)
-	{
 			std::cout << "x1. показать массив \n 2. найти минимум и максимум \n 3. вывести сумму элементов по диагонали (\\) \
             \n 4. вывод среднего арифметического. \n 0. закрыть программу \n";
-			do
+			while (_getch==0)
 			{
+
 				switch (_getch())
 				{
 				case 72:
@@ -46,7 +59,7 @@ int main()
 						position = 1;
 					break;
 				}
-				system("cls");
+				//system("cls");
 				switch (position)
 				{
 				case 1:
@@ -58,7 +71,7 @@ int main()
 						std::cout << "3. вывести сумму элементов по диагонали (\\)\n";
 						std::cout << "4. вывод среднего арифметического.\n";
 						std::cout << "0. закрыть программу\n";
-						system("cls");
+						//system("cls");
 					}
 
 					break;
@@ -147,8 +160,8 @@ int main()
 						break;
 					}
 				}
-			} while (true);
+			}
 	
-	}
+	
 	return position;
 }
