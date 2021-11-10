@@ -1,30 +1,23 @@
 #include<iostream>
 #include<Windows.h>
 #include<conio.h>
-#include
 
 int main()
 {
-	void setcur(int x, int y);//установка курсора на позицию  x y 
-	{
-		COORD coord;
-		coord.X = 0;
-		coord.Y = 0;
-		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-	};
+
 	setlocale(LC_ALL, "ru");
 	int position = 1;
 	int choose = 1;
 	while (_kbhit() == 0)
 	{
 		Sleep(500);
-		setcur(0, 0);
+		system("cls");
 		std::cout << "\n\t\t  \244\244\244 BV122StTest \244\244\244";
 		std::cout << "\n\t\t \244 задание по GitHub \244\n\n";
 		Sleep(250);
 		std::cout << "\n\t\t    press any key\n............................................................";
 	}
-	setcur(0, 0);
+	system("cls");
 
 	//while (_kbhit() == 0)
 	{
@@ -65,7 +58,7 @@ int main()
 						std::cout << "3. вывести сумму элементов по диагонали (\\)\n";
 						std::cout << "4. вывод среднего арифметического.\n";
 						std::cout << "0. закрыть программу\n";
-						setcur(0, 0);
+						system("cls");
 					}
 
 					break;
@@ -79,7 +72,7 @@ int main()
 						std::cout << "3. вывести сумму элементов по диагонали (\\)\n";
 						std::cout << "4. вывод среднего арифметического.\n";
 						std::cout << "0. закрыть программу\n";
-						setcur(0, 0);
+						system("cls");
 					}
 					break;
 
@@ -92,7 +85,7 @@ int main()
 						std::cout << "3.-=- вывести сумму элементов по диагонали (\\) -=-\n";
 						std::cout << "4. вывод среднего арифметического.\n";
 						std::cout << "0. закрыть программу\n";
-						setcur(0, 0);
+						system("cls");
 
 					}
 					break;
@@ -106,7 +99,7 @@ int main()
 						std::cout << "3. вывести сумму элементов по диагонали (\\)\n";
 						std::cout << "4.-=- вывод среднего арифметического. -=-\n";
 						std::cout << "0. закрыть программу\n";
-						setcur(0,0);
+						system("cls");
 					}
 				case 0:
 					while (_kbhit() == 0)
@@ -117,7 +110,7 @@ int main()
 						std::cout << "3. вывести сумму элементов по диагонали (\\)\n";
 						std::cout << "4. вывод среднего арифметического.\n";
 						std::cout << "-=- 0. закрыть программу -=-\n";
-						setcur(0, 0);
+						system("cls");
 					}
 				default:
 					break;
