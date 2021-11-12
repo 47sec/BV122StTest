@@ -13,8 +13,8 @@
 
 	int main()
 	{
-		SetConsoleCP(65001);
-		SetConsoleOutputCP(65001);
+		//SetConsoleCP(65001);
+		//SetConsoleOutputCP(65001);
 		//system("chcp 1251");
 		setlocale(LC_ALL, "ru");
 		int position = 1;
