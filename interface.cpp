@@ -12,8 +12,8 @@ void setCursorPosition(int x, int y)
 
 int main()
 {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+	SetConsoleCP(866);
+	SetConsoleOutputCP(866);
 	//system("chcp 1251");
 	setlocale(LC_ALL, "ru");
 	int position = 1;
