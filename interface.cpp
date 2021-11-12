@@ -12,10 +12,11 @@ void setCursorPosition(int x, int y)
 
 int main()
 {
-	
+	system("chcp 1251");
 	setlocale(LC_ALL, "ru");
 	int position = 1;
 	int choose = 1;
+	system("cls");
 	while (_kbhit() == 0)
 	{
 		std::cout << "\n\t\t  \244\244\244 BV122StTest \244\244\244";
